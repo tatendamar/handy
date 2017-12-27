@@ -1,0 +1,31 @@
+<% layout('boilerplate') %>
+
+<div class="container-fluid">
+    <header class="jumbotron">
+        <div class="container">
+         <h1> Welcome To YelpCamp</h1>
+         <p>View our camps</p>
+         <p>
+          <a class="btn btn-primary btn-lg" href="/services/new">Add New Service</a>
+         </p>
+        </div>
+    </header>
+    
+    
+   <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% services.forEach(function(serv){ %>
+        <div class="col-md-4">
+         <p><a href="/services/<%= serv._id %>" style="text-decoration: none;    color: #34495e">
+           <div class="panel panel-default">
+
+            <div class="panel-body">
+                <img id="serv-img" src="<%= serv.image%>">
+
+                <h4><%= serv.name %> </h4> 
+           </div>
+         </div>
+          </a>
+       </div>
+     <% }); %>
+     </div>
+    </div>

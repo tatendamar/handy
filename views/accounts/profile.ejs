@@ -1,0 +1,42 @@
+<% layout('boilerplate') %>
+
+<div class="container">
+    <% if( message.length > 0){ %>
+      <div class="alert alert-success alert-dismissible">
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times</span>   
+       </button> 
+       <%= message %>
+      </div>
+      <% } %>
+  <div class="well">
+  <% if (user.local.email){ %>
+         <p>
+           <strong>Id</strong>:<%=user._id %><br>
+           <strong>email</strong>:<%=user.local.email %><br>
+           <strong>password</strong>:<%=user.local.password %><br>
+         </p>  
+      <%  } else { %>
+          <a href="/connect/local" class="btn btn-default">Connect local</a>
+       <% } %>
+      </div>
+
+         <!-- facebook info -->
+           <div class="col-md-6">
+           <div class="weel">
+             <h3 class="text-primary"><span class="fa fa-facebook"></span>Facebook</h3>
+              <% if (user.facebook.token){ %>
+             <p>
+               <strong>Id</strong>:<%= user.facebook.id %><br>
+               <strong>Token</strong>:<%= user.facebook.token %><br>
+               <strong>email</strong>:<%= user.facebook.email %><br>
+               <strong>name</strong>:<%= user.facebook.name %>
+             </p>
+           <% } else { %>
+            <a href="/connect/local" class="btn btn-default">Connect Facebook</a>
+            <% } %>
+           </div>
+
+         </div>
+    </div>
+  

@@ -1,0 +1,85 @@
+.bg{
+  /* background: url("") no-repeat center center;*/
+   position: fixed;
+   width: 100%;
+   height: 350px;
+   top: 0;
+   left: 0;
+   z-index: -1;
+ }
+
+#thumbimg{
+   height: 30%;
+ }
+ .panel-body{
+   border:0px;
+   height:250px;
+   overflow-y:auto
+  }
+ #serv-img{
+   height: 76%;
+   width: 90%;
+ }
+ fieldset{
+   margin: 10px auto;
+ }
+ 
+ legend{
+   border-bottom: none;
+ }
+ #title-error, #email-error, #password-error,#passwordRe-error,
+ #address-error, #mobile-error,#city-error,
+ #school-error,#desc-error,#name-error{
+   color: #d9534f;
+   padding: 12px;
+   display: none;
+ }
+ 
+ footer{
+   text-align: center;
+ }
+ 
+ /*modal*/
+ #button-popup{
+   border-radius: 5px;
+   margin-left: 50px;
+ }
+ .window-popup{
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   z-index: 10;
+   background: rgba(0, 0, 0, 0.5);
+   top: 0;
+   left: 0;
+   display: none;
+   overflow: scroll;
+ }
+ .wp-content{
+   width: 70%;
+   height: 70%;
+   background: #f4f4f4;
+   border-radius: 3px;
+   position: absolute;
+   left: 10%;
+   top: 10%;
+   box-shadow: 0 5px 8px 0 rgba(0, 0, 0,0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
+   animation-name: modalopen;
+   animation-duration: 1s;
+ }
+ #button-popup-close{
+   color: #ccc;
+   float: right;
+   font-size: 30px;
+   margin-right: 10px;
+ }
+ #button-popup-close:hover, #button-popup-close:focus{
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+ }
+ 
+ @keyframes modalopen{
+   from{opacity: 0}
+   to{opacity: 1}
+ }
